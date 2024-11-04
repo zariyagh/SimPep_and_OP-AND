@@ -1,7 +1,7 @@
 # SimPep and OP-AND
 Overview
 
-OP-AND is a curated public database of osteogenic peptides, and SimPep is a deep learning framework for predicting Osteogenic properties of peptides using OP-AND.
+OP-AND is a curated public database of osteogenic peptides, and SimPep is a deep learning framework for predicting Osteogenic properties of peptides using OP-AND. In loving memory of Abbas Nowzari-Dalini
 
 ## Notebook Structure
 
