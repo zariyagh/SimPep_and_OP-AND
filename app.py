@@ -29,7 +29,7 @@ def embed_peptide_with_protbert(seq):
 
   # vec_pos: the ProtBert-Based of OPs collected from OP-AND
 
-df_pos = pd.read_csv('https://github.com/zariyagh/SimPep_and_OP-AND/blob/main/PPP_ProtBERT_embeddings.txt', sep=",", header=None)
+df_pos = pd.read_csv('https://raw.githubusercontent.com/zariyagh/SimPep_and_OP-AND/blob/main/PPP_ProtBERT_embeddings.txt', sep=",", header=None)
 df_pos = df_pos.iloc[:, 1:-1]
 print(df_pos.shape)
 df_pos = df_pos.drop_duplicates()
@@ -37,19 +37,19 @@ print(df_pos.shape)
 
 # vec_neg_Q5T9C2: the ProtBert-Based of NPP collected from Q5T9C2
 
-df_neg1 = pd.read_csv('https://github.com/zariyagh/SimPep_and_OP-AND/blob/main/NPP_Q5T9C2_ProtBERT_embeddings.txt', sep=",", header=None)
+df_neg1 = pd.read_csv('https://raw.githubusercontent.com/zariyagh/SimPep_and_OP-AND/blob/main/NPP_Q5T9C2_ProtBERT_embeddings.txt', sep=",", header=None)
 df_neg1 = df_neg1.iloc[:, 1:-1]
 df_neg1 = df_neg1.drop_duplicates()
 
 # vec_neg_Q5T9C2: the ProtBert-Based of NPP collected from Q9CWT3
 
-df_neg2 = pd.read_csv('https://github.com/zariyagh/SimPep_and_OP-AND/blob/main/NPP_Q9CWT3_ProtBERT_embeddings.txt', sep=",", header=None)
+df_neg2 = pd.read_csv('https://raw.githubusercontent.com/zariyagh/SimPep_and_OP-AND/blob/main/NPP_Q9CWT3_ProtBERT_embeddings.txt', sep=",", header=None)
 df_neg2 = df_neg2.iloc[:, 1:-1]
 df_neg2 = df_neg2.drop_duplicates()
 
 # vec_neg_O88942: the ProtBert-Based of NPP collected from O88942
 
-df_neg3 = pd.read_csv('https://github.com/zariyagh/SimPep_and_OP-AND/blob/main/NPP_O88942_ProtBERT_embeddings.txt', sep=",", header=None)
+df_neg3 = pd.read_csv('https://raw.githubusercontent.com/zariyagh/SimPep_and_OP-AND/blob/main/NPP_O88942_ProtBERT_embeddings.txt', sep=",", header=None)
 df_neg3 = df_neg3.iloc[:, 1:-1]
 df_neg3 = df_neg3.drop_duplicates()
 
@@ -97,7 +97,7 @@ def build_siamese_model(input_dim):
 
 input_dim = 1024  
 model = build_siamese_model(input_dim)
-model.load_weights('https://github.com/zariyagh/SimPep_and_OP-AND/blob/main/weights_only.weights.h5')
+model.load_weights('https://raw.githubusercontent.com/zariyagh/SimPep_and_OP-AND/blob/main/weights_only.weights.h5')
 
 x0_train = X0
 x1_train = X1
