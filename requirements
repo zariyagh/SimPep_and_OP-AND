@@ -1,0 +1,6 @@
+flask
+tensorflow
+torch
+transformers
+numpy
+biopython
