@@ -29,7 +29,7 @@ def embed_peptide_with_protbert(seq):
 
   # vec_pos: the ProtBert-Based of OPs collected from OP-AND
 
-df_pos = pd.read_csv('/content/drive/MyDrive/Osta/PPP_ProtBERT_embeddings.txt', sep=",", header=None)
+df_pos = pd.read_csv('PPP_ProtBERT_embeddings.txt', sep=",", header=None)
 df_pos = df_pos.iloc[:, 1:-1]
 print(df_pos.shape)
 df_pos = df_pos.drop_duplicates()
@@ -37,19 +37,19 @@ print(df_pos.shape)
 
 # vec_neg_Q5T9C2: the ProtBert-Based of NPP collected from Q5T9C2
 
-df_neg1 = pd.read_csv('/content/drive/MyDrive/Osta/NPP_Q5T9C2_ProtBERT_embeddings.txt', sep=",", header=None)
+df_neg1 = pd.read_csv('NPP_Q5T9C2_ProtBERT_embeddings.txt', sep=",", header=None)
 df_neg1 = df_neg1.iloc[:, 1:-1]
 df_neg1 = df_neg1.drop_duplicates()
 
 # vec_neg_Q5T9C2: the ProtBert-Based of NPP collected from Q9CWT3
 
-df_neg2 = pd.read_csv('/content/drive/MyDrive/Osta/NPP_Q9CWT3_ProtBERT_embeddings.txt', sep=",", header=None)
+df_neg2 = pd.read_csv('NPP_Q9CWT3_ProtBERT_embeddings.txt', sep=",", header=None)
 df_neg2 = df_neg2.iloc[:, 1:-1]
 df_neg2 = df_neg2.drop_duplicates()
 
 # vec_neg_O88942: the ProtBert-Based of NPP collected from O88942
 
-df_neg3 = pd.read_csv('/content/drive/MyDrive/Osta/NPP_O88942_ProtBERT_embeddings.txt', sep=",", header=None)
+df_neg3 = pd.read_csv('NPP_O88942_ProtBERT_embeddings.txt', sep=",", header=None)
 df_neg3 = df_neg3.iloc[:, 1:-1]
 df_neg3 = df_neg3.drop_duplicates()
 
@@ -136,7 +136,7 @@ def RealPredict(X, test_pred, Indexsample):
 def predict():
     try:
         data = request.get_json()
-        peptide_seq = data["peptide_sequence"]  # رشته پپتید
+        peptide_seq = data["peptide_sequence"] 
         peptide_vector = embed_peptide_with_protbert(peptide_seq).reshape(1, -1)
         main_test, index_sample = RealTest(peptide_vector, x0_train, x1_train)
         left = main_test[:, :input_dim]
