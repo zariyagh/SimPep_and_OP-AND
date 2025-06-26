@@ -7,9 +7,9 @@ We also propose a novel hypothesis: peptides derived from proteins involved in *
 
 Considering the limited availability of OP data, we present **SimPep**, a deep learning framework achieving:
 
-- **Accuracy**: 92.93%
-- **Specificity**: 96.64%
-- **Sensitivity**: 70.58%  
+- **Accuracy**: 87.44%
+- **Specificity**: 93.94%
+- **Sensitivity**: 68.62%  
 (using 5-fold cross-validation)
 
 ---
